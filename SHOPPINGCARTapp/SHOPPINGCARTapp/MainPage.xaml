@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fingerDraw.MainPage"
+             BackgroundColor="Black">
+
+
+    <Frame BackgroundColor="Black" BorderColor="Green" CornerRadius="35">
+        <StackLayout>
+
+            <Frame BackgroundColor="#323232" BorderColor="Green" CornerRadius="25" >
+                <StackLayout>
+                    <Label Text="SHOPPING CART" FontSize="25" TextColor="Azure" HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" FontAttributes="Bold" VerticalOptions="Start"
+                        />
+                    <Label></Label>
+                    <Label></Label>
+                    <Entry Placeholder="Will be buy:" FontAttributes="Bold" FontSize="20" TextColor="Azure"
+                    x:Name="Aitem" PlaceholderColor="Azure"></Entry>
+                    <Label Text="Type products one after the other"></Label>
+                </StackLayout>
+            </Frame>
+            <Label></Label>
+
+            <Frame BackgroundColor="Azure" BorderColor="Green" CornerRadius="25"  >
+                <ListView x:Name="list" RowHeight="150"
+                           IsPullToRefreshEnabled="True"
+                          IsVisible="True" ItemSelected="list_ItemSelected"
+                          Refreshing="list_Refreshing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Update the list" TextColor="Green"
+                                           FontSize="15"></Label>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition ></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding items}" Grid.Column="0"
+                                               Grid.Row="0" TextColor="Green"
+                                               FontSize="20" FontAttributes="Bold"></Label>
+
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+
+            <Button Text="SAVE"  FontAttributes="Bold" 
+                        FontSize="20" BorderColor="Green" BorderWidth="2" CornerRadius="25" 
+                        x:Name="save" Clicked="save_Clicked" BackgroundColor="Black" TextColor="Green"></Button>
+            <Button Text="SEE"  FontAttributes="Bold" 
+                        FontSize="20" BorderColor="Green" BorderWidth="2" CornerRadius="25" 
+                        x:Name="see" Clicked="see_Clicked" BackgroundColor="Black" TextColor="Green"></Button>
+        </StackLayout>
+
+    </Frame>
+    
+
+</ContentPage>

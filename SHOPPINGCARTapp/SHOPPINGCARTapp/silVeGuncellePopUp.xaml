@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fingerDraw.silVeGuncellePopUp"
+              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    >
+    
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            />
+    </pages:PopupPage.Animation>
+    <StackLayout Margin="40">
+        <Frame  BackgroundColor="#323232" BorderColor="Green" CornerRadius="25" >
+            <StackLayout>
+                <Button Text="Delete" x:Name="sil" Clicked="sil_Clicked"
+                        FontSize="20" FontAttributes="Bold" BackgroundColor="Black"
+                        TextColor="Green" BorderColor="Green" BorderWidth="3"
+                        CornerRadius="25"></Button>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#323232" BorderColor="Green" CornerRadius="25">
+            <StackLayout>
+                <Entry Placeholder="Entry items: " x:Name="up" PlaceholderColor="Green"
+                       FontAttributes="Bold" FontSize="20" ></Entry>
+                
+                <Button Text="Update" x:Name="guncelle" Clicked="guncelle_Clicked"
+                        FontSize="20" FontAttributes="Bold" BackgroundColor="Black"
+                        TextColor="Green" BorderColor="Green" BorderWidth="3"
+                        CornerRadius="25"></Button>
+            </StackLayout>
+        </Frame>
+
+        <Frame  BackgroundColor="#323232" BorderColor="Green" CornerRadius="25">
+            <StackLayout>
+                <Button Text="Back" x:Name="geri" Clicked="geri_Clicked"
+                        FontSize="20" FontAttributes="Bold" BackgroundColor="Black"
+                        TextColor="Green" BorderColor="Green" BorderWidth="3"
+                        CornerRadius="25"></Button>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#323232" BorderColor="Green" CornerRadius="25" VerticalOptions="EndAndExpand">
+            <Label Text="Moon Bow Community" FontSize="25" TextColor="Green" HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"></Label>
+        </Frame>
+    </StackLayout>
+
+</pages:PopupPage>
